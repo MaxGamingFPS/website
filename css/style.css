@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-/*    border: 1px solid red;  */
+ border: 1px solid red;
 }
 
 body {
@@ -164,7 +164,7 @@ p {
 .resources div {
     display: flex;
     flex-direction: column;
-    align-self: baseline;
+    align-self: flex-start;
 }
 
 /* Premium and Bond Worth List style */
