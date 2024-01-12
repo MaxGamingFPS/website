@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
- border: 1px solid red;
+ /* border: 1px solid red; */
 }
 
 body {
@@ -161,7 +161,7 @@ p {
     gap: 50px;
 }
 
-.resources div {
+.resources div {g
     display: flex;
     flex-direction: column;
     align-self: flex-start;
