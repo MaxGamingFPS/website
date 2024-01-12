@@ -153,7 +153,21 @@ p {
     margin-block: 30px;
 }
 
-/* Premium Worth List style */
+/* Resources style */
+
+.resources {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.resources div {
+    display: flex;
+    flex-direction: column;
+    align-self: baseline;
+}
+
+/* Premium and Bond Worth List style */
 
 .tank-cat {
     align-self: center;
@@ -178,27 +192,27 @@ h2.must-have {
     color: #ffd166;
 }
 
-h2.credit-grinder {
+h2.credit-grinder, h2.worth {
     color: #7eff7d;
 }
 
-.credit-grinder {
+.credit-grinder, .worth {
     color: #aff0ca;
     font-weight: bold;
 }
 
-h2.fun-only {
+h2.fun-only, h2.shortlist {
     color: #5a9cff
 }
 
-.fun-only {
+.fun-only, .shortlist {
     color: #b6dcf3;
 }
 
-h2.avoid {
+h2.avoid, h2.not-worth {
     color: #ff5f5f;
 }
 
-.avoid {
+.avoid, .not-worth {
     color: #ffafaf;
 }
