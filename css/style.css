@@ -1,6 +1,17 @@
-* {
+html {
     box-sizing: border-box;
- /* border: 1px solid red; */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+ /*  border: 1px solid red; */
 }
 
 body {
@@ -13,15 +24,16 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 main {
     width: 700px;
+    align-self: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-block: 80px;
+    margin-block: 100px;
+    gap: 30px;
 }
 
 /* Links style */
@@ -30,62 +42,53 @@ a {color: inherit; text-decoration: none;}
 a:hover {color: rgb(255, 76, 77);}
 a:active {color: rgb(255, 152, 77);}
 
-a[href^="https"], .resource {text-decoration: underline;}
+a[href^="https"] {text-decoration: underline;}
 
 /* nav & footer */
 
-footer, header {
+footer, nav {
     width: 100%;
     height: 60px;
     background-color: rgb(23, 23, 23);
     position: fixed;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     z-index: 1000;
-}
-
-header {
-    top: 0px;
-    font-size: large;
-    font-weight: bold;
-}
-
-nav a {
-    padding: 20px;
-    margin-inline: 20px;
 }
 
 footer {
     bottom: 0px;
-}
-
-footer .footer-content {
     display: flex;
-    width: 800px;
-    justify-content: space-between;
     align-items: center;
-    height: inherit;
+    gap: 400px;
 }
 
-footer .footer-links {
+.footer-links {
+    height: 60%;
     display: flex;
-    height: inherit;
+    gap: 30px;
 }
 
-footer p {
-    align-self: center;
-}
-
-footer img, footer a {
-    height: 36px;
+.footer-links img, .icon-home img {
+    height: 100%;
     width: auto;
+    border-radius: 10%;
 }
 
-footer a {
-    height: 36px;
-    margin: 12px;
-    padding: 0;
+nav {
+    top: 0px;
+    font-size: large;
+    font-weight: bold;
+    gap: 30px
+}
+
+nav a {
+    padding-inline: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
 }
 
 /* Other styles */
@@ -95,8 +98,11 @@ footer a {
     width: 100%;
     height: 0;
     padding-bottom: 56.25%;
-    margin-block: 30px;
+    margin-block: 25px;
+}
 
+p, li, dd {
+    line-height: 1.3rem;
 }
 
 .video {
@@ -114,18 +120,8 @@ footer a {
 
 ul {
     align-self: flex-start;
-    padding-left: 0;    
+    padding-left: 0;
     list-style-type: none;
-}
-
-li, dd {
-    padding-top: 0.5em;
-}
-
-p {
-    align-self: flex-start;
-    text-align: justify;
-    line-height: 1.4em;
 }
 
 /* Home page style */
@@ -134,17 +130,23 @@ p {
     margin-block: 72px;
 }
 
-.icon-home a, .icon-home img {
-    width: 72px;
-    height: auto;
-    margin: 72px 18px 0px;
+.icon-home {
+    display: flex;
+    margin-top: 72px;
+    gap: 80px;
+    height: 100px;
+    justify-content: center;
 }
 
 /* FAQ page style */
 
 .question {
     font-weight: bold;
-    margin-bottom: 0.3em;
+    margin-bottom: 6px;
+}
+
+.info {
+    align-self: flex-start;
 }
 
 .pc-picture {
@@ -155,28 +157,41 @@ p {
 
 /* Resources style */
 
-.resources {
+.resources div {
     display: flex;
     flex-direction: column;
-    gap: 50px;
-}
-
-.resources div {g
-    display: flex;
-    flex-direction: column;
-    align-self: flex-start;
+    gap: 20px;
 }
 
 /* Premium and Bond Worth List style */
 
 .tank-cat {
     align-self: center;
+    text-align: center;
     margin-top: -5px;
+}
+
+p {
+    align-self: flex-start;
+    text-align: justify;    
+}
+
+p.center, footer p {
+    align-self: center;
 }
 
 dl {
     align-self: flex-start;
+    margin: 0 0 10px 20px;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
     padding-left: 20px;
+    margin-block: 5px;
 }
 
 hr {
@@ -198,7 +213,6 @@ h2.credit-grinder, h2.worth {
 
 .credit-grinder, .worth {
     color: #aff0ca;
-    font-weight: bold;
 }
 
 h2.fun-only, h2.shortlist {
