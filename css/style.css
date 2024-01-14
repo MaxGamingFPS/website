@@ -11,7 +11,7 @@ html {
 * {
     margin: 0;
     padding: 0;
- /*  border: 1px solid red; */
+ /* border: 1px solid red; */
 }
 
 body {
@@ -26,72 +26,23 @@ body {
     flex-direction: column;
 }
 
+/* General content style */
+
 main {
-    width: 700px;
+    width: 100%;
+    max-width: 700px;
     align-self: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-block: 100px;
+    margin-block: 80px;
+    padding-inline: 10px;
     gap: 30px;
 }
 
-/* Links style */
-
-a {color: inherit; text-decoration: none;}
-a:hover {color: rgb(255, 76, 77);}
-a:active {color: rgb(255, 152, 77);}
-
-a[href^="https"] {text-decoration: underline;}
-
-/* nav & footer */
-
-footer, nav {
-    width: 100%;
-    height: 60px;
-    background-color: rgb(23, 23, 23);
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    z-index: 1000;
+p, li, dd {
+    line-height: 1.3rem;
 }
-
-footer {
-    bottom: 0px;
-    display: flex;
-    align-items: center;
-    gap: 400px;
-}
-
-.footer-links {
-    height: 60%;
-    display: flex;
-    gap: 30px;
-}
-
-.footer-links img, .icon-home img {
-    height: 100%;
-    width: auto;
-    border-radius: 10%;
-}
-
-nav {
-    top: 0px;
-    font-size: large;
-    font-weight: bold;
-    gap: 30px
-}
-
-nav a {
-    padding-inline: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-}
-
-/* Other styles */
 
 .youtube {
     position: relative;
@@ -99,10 +50,6 @@ nav a {
     height: 0;
     padding-bottom: 56.25%;
     margin-block: 25px;
-}
-
-p, li, dd {
-    line-height: 1.3rem;
 }
 
 .video {
@@ -127,15 +74,110 @@ ul {
 /* Home page style */
 
 .home h1 {
-    margin-block: 72px;
+    margin-block: 36px;
 }
 
 .icon-home {
+    width: 100%;
+    height: auto;
     display: flex;
-    margin-top: 72px;
-    gap: 80px;
-    height: 100px;
+    margin-top: 36px;
+    gap: 30px;
+    justify-content: space-evenly;
+}
+
+.icon-home a {
+    display: flex;
+}
+
+.icon-home img {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    border-radius: 20%;
+}
+
+/* Links style */
+
+a {color: inherit; text-decoration: none;}
+a:hover {color: rgb(255, 76, 77);}
+a:active {color: rgb(255, 152, 77);}
+
+a[href^="https"] {text-decoration: underline;}
+
+/* nav & footer */
+
+.header {
+    z-index: 1000;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 20%;
+    max-height: 60px;
+    background-color: rgb(23, 23, 23);
+    display: flex;
     justify-content: center;
+    align-items: stretch;
+}
+
+nav {
+    width: 100%;
+    max-width: 800px;
+    font-size: large;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a {
+    width: 25%;
+    max-width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+footer {
+    z-index: 1000;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 20%;
+    max-height: 60px;
+    background-color: rgb(23, 23, 23);
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1200px;
+    min-width: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-links {
+    width: 40%;
+    max-width: 200px;
+    min-width: 50px;
+    height: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-links img {
+    width: 40px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20%;
 }
 
 /* FAQ page style */
