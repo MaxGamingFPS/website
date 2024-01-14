@@ -34,7 +34,6 @@ main {
     align-self: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
     margin-block: 120px;
     padding-inline: 10px;
