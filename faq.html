@@ -28,12 +28,20 @@
 
             <ul>
                 <script type="text/javascript">
-                    var dob = new Date("12/20/1998");
-                    var month_diff = Date.now() - dob.getTime();
-                    var age_dt = new Date(month_diff);
-                    var year = age_dt.getUTCFullYear();
-                    var age = Math.abs(year - 1970);
-                    document.getElementById("age").innerHTML = age;
+                    function calculateAge (birthDate, otherDate) {
+                    birthDate = new Date(birthDate);
+                    otherDate = new Date(otherDate);
+
+                    var years = (otherDate.getFullYear() - birthDate.getFullYear());
+
+                    if (otherDate.getMonth() < birthDate.getMonth() || 
+                    otherDate.getMonth() == birthDate.getMonth() && otherDate.getDate() < birthDate.getDate()) {
+                    years--;
+                    }
+
+                    return years;
+                }
+                    var age = calculateAge("20/20/1998", .getFullYear());
                 </script>
                 <li class="question">How old are you?</li>
                 <li><span id="age"></span></li>
