@@ -26,23 +26,26 @@
                 <li>UK - Kent.</li>
             </ul>
 
+            
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Define the person's birthdate (YYYY, MM - 1, DD)
+            // Note: JavaScript months are 0-indexed (0 = January, 11 = December)
+            const birthdate = new Date(1998, 12 - 1, 20);
+            const today = new Date();
+            let age = today.getFullYear() - birthdate.getFullYear();
+            const m = today.getMonth() - birthdate.getMonth();
+
+            // Check if the current date is before the birthday of the current year
+            if (m < 0 || (m === 0 && today.getDate() < birthdate.getDate())) {
+                age--;
+            }
+
+            // Update the age on the webpage
+            document.getElementById('age').textContent = age;
+        });
+    </script>
             <ul>
-                <script type="text/javascript">
-                    function calculateAge (birthDate, otherDate) {
-                    birthDate = new Date(birthDate);
-                    otherDate = new Date(otherDate);
-
-                    var years = (otherDate.getFullYear() - birthDate.getFullYear());
-
-                    if (otherDate.getMonth() < birthDate.getMonth() || 
-                    otherDate.getMonth() == birthDate.getMonth() && otherDate.getDate() < birthDate.getDate()) {
-                    years--;
-                    }
-
-                    return years;
-                }
-                    var age = calculateAge("20/20/1998", getFullYear());
-                </script>
                 <li class="question">How old are you?</li>
                 <li><span id="age"></span></li>
             </ul>
